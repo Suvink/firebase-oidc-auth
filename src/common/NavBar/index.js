@@ -75,7 +75,7 @@ const NavBar = () => {
               <figure className="image is-hidden-mobile">
                 <img
                   className="is-rounded"
-                  src={user ? user.photoURL : Avatar}
+                  src={user?.photoURL || Avatar}
                   alt="DevFest"
                 />
               </figure>
