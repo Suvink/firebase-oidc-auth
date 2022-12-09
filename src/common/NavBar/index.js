@@ -64,7 +64,7 @@ const NavBar = () => {
         <div className="navbar-start">
           <a className="navbar-item">Home</a>
           <a className="navbar-item">Dev Fest Sri Lanka</a>
-          <a className="navbar-item">Asgardeo</a>
+          <a className="navbar-item">Auth0</a>
         </div>
 
         {user && <div className="navbar-end">

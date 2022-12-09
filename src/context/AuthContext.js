@@ -10,7 +10,7 @@ const AuthContextProvider = ({ children }) => {
     const [loading, setLoading] = useState(true)
 
     const signInWithAsgardeo = () => {
-        const oidcProvider = new OAuthProvider('oidc.asgardeo');
+        const oidcProvider = new OAuthProvider('oidc.auth0');
         return signInWithPopup(auth, oidcProvider);
     }
 
