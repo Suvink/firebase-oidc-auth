@@ -9,13 +9,13 @@ import "./index.css";
 
 const NavBar = () => {
 
-  const { user, signOutFromAsgardeo } = useAuth();
+  const { user, signOutFromAuth0 } = useAuth();
   const history = useHistory();
   const { enqueueSnackbar } = useSnackbar();
 
   const logout = async () => {
     try {
-      const logoutResponse = await signOutFromAsgardeo();
+      const logoutResponse = await signOutFromAuth0();
       if (logoutResponse) {
         history.replace("/");
       }

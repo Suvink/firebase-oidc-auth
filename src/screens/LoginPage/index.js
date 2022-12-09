@@ -8,15 +8,15 @@ import "./index.css";
 
 const LoginPage = () => {
 
-  const { signInWithAsgardeo } = useAuth();
+  const { signInWithAuth0 } = useAuth();
   const { enqueueSnackbar } = useSnackbar();
   const history = useHistory()
 
   const initiateOIDCLogin = async (e) => {
     e.preventDefault();
     try {
-      const asgardeoResponse = await signInWithAsgardeo();
-      if (asgardeoResponse) {
+      const auth0Response = await signInWithAuth0();
+      if (auth0Response) {
         history.replace("/");
       }
     } catch (err) {

@@ -9,12 +9,12 @@ const AuthContextProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true)
 
-    const signInWithAsgardeo = () => {
+    const signInWithAuth0 = () => {
         const oidcProvider = new OAuthProvider('oidc.auth0');
         return signInWithPopup(auth, oidcProvider);
     }
 
-    const signOutFromAsgardeo = () => {
+    const signOutFromAuth0 = () => {
         return signOut(auth);
     }
     useEffect(() => {
@@ -27,7 +27,7 @@ const AuthContextProvider = ({ children }) => {
         }
     }, [])
 
-    return <authContext.Provider value={{ user, loading, signInWithAsgardeo, signOutFromAsgardeo }}>
+    return <authContext.Provider value={{ user, loading, signInWithAuth0, signOutFromAuth0 }}>
         {children}
     </authContext.Provider>
 }
